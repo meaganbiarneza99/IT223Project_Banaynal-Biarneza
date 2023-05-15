@@ -1,0 +1,411 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f6f6;
+}
+
+.header {
+  background-image: url('Aomizu\ Header\ V3.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: #fafafa;
+  text-align: center;
+  padding: 16%;
+}
+.header h1 {
+  font-size: 40px;
+}
+.navbar {
+overflow: hidden;
+background-color: #333;
+font-family: Arial;
+display: flex;
+/* flex-direction: row-reverse; */
+justify-content: space-between;
+position: sticky;
+top: 0;
+overflow: hidden;
+padding-top: 1.5px;
+}
+
+.brand a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-links a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+width: 9em;
+height: 3em;
+border-radius: 30em;
+font-size: 15px;
+font-family: inherit;
+border: none;
+position: relative;
+overflow: hidden;
+z-index: 1;
+}
+
+
+.navbar-links a::before {
+ content: '';
+ width: 0;
+ height: 3em;
+ border-radius: 30em;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-image: url(Cherry\ Blossom\ Picture.png);
+ background-size: cover;
+ transition: .3s ease;
+ display: block;
+ z-index: -1;
+}
+
+.navbar-links a:hover::before {
+  width: 9em;
+ }
+
+.navbar-links a:hover{
+  color: #000000;
+  /* box-shadow: 3px 3px 6px #000000,
+-3px -3px 6px #3d3d3d; */
+}
+
+.brand a {
+height: 46.5px;
+padding: 10px;
+float: right;
+justify-content: center;
+align-self: center;
+}
+
+.navbar img {
+height: 100%;
+width: 100%;
+}
+.navbar .navbar-links {
+  display: flex;
+}
+
+.navbar .navbar-links a {
+  display: block;
+  text-align: center;
+  float: left;
+}
+
+.navbar .navbar-toggle-label {
+  display: none;
+  cursor: pointer;
+  padding: 14px 20px;
+  float: left;
+}
+
+.navbar #navbar-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 14px 20px;
+  float: left;
+}
+
+.navbar .navbar-toggle-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  transition: background-color 0.3s ease;
+  float: left;
+}
+
+.product-filter h1 {
+    font-size: 28px;
+    font-weight: 300;
+    flex: 1;
+    padding: 0px 20px;
+    font-weight: bold;
+}
+
+.products h5 {
+    font-weight: 500;
+    line-height: 1.7em;
+}
+
+.products h6 {
+    color: #666;
+    font-size: 14px;
+}
+
+.product-body {
+    margin-left: 10 auto;
+    margin-right: 10 auto;
+    width: 90%;
+    max-width: 1240px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f6f6;
+}
+
+.product-filter {
+    display: flex;
+    padding: 30px 0;
+}
+
+.sort {
+    display: flex;
+    align-self: flex-end;
+}
+
+.collection-sort {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
+.collection-sort:first-child {
+    padding-right: 20px;
+}
+
+label {
+    color: #666;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 2em;
+    text-transform: uppercase;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 2%;
+    flex: 1 16%;
+    margin: 0.5%;
+    
+    background-color: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+}
+
+.product-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-image input {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    margin-top: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.site-footer
+{
+  background-color:#333333;
+  padding:45px 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer input {
+  width: 20%;
+  margin: auto;
+  display: block;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-top:10px;
+}
+
+.footer-links a
+{
+  color:#737373;
+  text-decoration: none;
+  padding: 90px 20px;
+}
+
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+
+.copyright-text
+{
+  margin:0
+}
+
+.social-icons {
+  padding: 40px 20px;
+}
+
+.container {
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.social-icons a {
+  color: #ffffff;
+}
+
+.social-icons .social {
+  -webkit-transform: scale(0.8);  
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+}
+
+.social-icons #social-fb:hover {
+  color: #3B5998;
+}
+
+.social-icons #social-tw:hover {
+  color: #4099FF;
+}
+
+.social-icons #social-gp:hover {
+  color: #d34836;
+}
+
+.social-icons #social-em:hover {
+  color: #f39c12;
+}
+
+@media ( max-width: 920px ) {
+    
+  .product-card {
+      flex: 1 21%;
+  }
+  
+  .products .product-card:first-child, 
+  .products .product-card:nth-child(2) {
+      flex: 2 46%;
+  }
+  
+}
+
+@media ( max-width: 600px ) {
+  
+  .product-card {
+      flex: 1 46%;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  
+  
+}
+
+@media ( max-width: 480px ) {
+  
+  h1 {
+      margin-bottom: 20px;
+  }
+  
+  .product-filter {
+      flex-direction: column;
+  }
+  
+  .sort {
+      align-self: flex-start;
+  }
+  
+}
+
+@media (max-width: 520px) {
+  .navbar .navbar-links {
+    display: none;
+  }
+
+  .navbar .navbar-toggle-label {
+    display: block;
+  }
+
+  .navbar .navbar-toggle-icon {
+    margin-top: 6px;
+  }
+
+  .navbar input[type="checkbox"]:checked ~ .navbar-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar input[type="checkbox"]:checked ~ .navbar-links a {
+    padding: 14px 20px;
+    transition: background-color 0.3s ease;
+  }
+}
+
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer
+  {
+    text-align:center
+  }
+}
