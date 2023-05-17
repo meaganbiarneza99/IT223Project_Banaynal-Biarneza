@@ -130,7 +130,7 @@ width: 100%;
   height: 3px;
   background-color: white;
   position: relative;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
   float: left;
 }
 
@@ -224,10 +224,158 @@ label {
     text-align: center;
 }
 
+/* Test Product popup */
+
+.product-popup {
+  height: 420px;
+  width: 28%;
+  margin: 50px auto;
+  border-radius: 7px 7px 7px 7px;
+  /* VIA CSS MATIC https://goo.gl/cIbnS */
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  overflow: auto;
+}
+
+.product-popup-img {
+  float: left;
+  height: 420px;
+  width: 327px;
+}
+
+.product-popup-img img {
+  border-radius: 7px 0 0 7px;
+}
+
+.product-popup-info {
+  float: left;
+  height: 420px;
+  width: 327px;
+  border-radius: 0 7px 10px 7px;
+  background-color: #ffffff;
+}
+
+.product-popup-text {
+  height: 300px;
+  width: 327px;
+}
+
+.product-popup-text h1 {
+  margin: 0 0 0 38px;
+  padding-top: 52px;
+  font-size: 34px;
+  color: #474747;
+}
+
+.product-popup-text h1,
+.product-popup-price-btn p {
+  font-family: 'Bentham', serif;
+}
+
+.product-popup-text h2 {
+  margin: 0 0 47px 38px;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d2d2d2;
+  letter-spacing: 0.2em;
+}
+
+.product-popup-text p {
+  height: 125px;
+  margin: 0 0 0 38px;
+  font-family: 'Playfair Display', serif;
+  color: #8d8d8d;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
+  overflow: hidden;
+}
+
+.product-popup-price-btn {
+  height: 103px;
+  width: 327px;
+  margin-top: 17px;
+  position: relative;
+}
+
+.product-popup-price-btn p {
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  height: 50px;
+  font-family: 'Trocchi', serif;
+  margin: 0 0 0 38px;
+  font-size: 28px;
+  font-weight: lighter;
+  color: #474747;
+}
+
+.product-popup span {
+  display: inline-block;
+  height: 50px;
+  font-family: 'Suranna', serif;
+  font-size: 34px;
+}
+
+.product-popup-price-btn button {
+  display: inline-block;
+  height: 50px;
+  width: 176px;
+  margin: 0 40px 0 16px;
+  box-sizing: border-box;
+  border: transparent;
+  border-radius: 60px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  background-color: #9cebd5;
+  cursor: pointer;
+  outline: none;
+}
+
+.product-popup-price-btn button:hover {
+  background-color: #79b0a1;
+}
+
+#overlay,
+#overlay1,
+#overlay2,
+#overlay3,
+#overlay4 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+#overlay .product-popup,
+#overlay1 .product-popup,
+#overlay2 .product-popup,
+#overlay3 .product-popup,
+#overlay4 .product-popup {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+/* Footer */
+
 .site-footer
 {
   background-color:#333333;
-  padding:45px 20px;
+  padding: 20px 20px;
   font-size:15px;
   line-height:24px;
   color:#737373;
@@ -263,6 +411,8 @@ label {
   color:#3366cc;
   text-decoration:none;
 }
+
+/* Footer word links */
 .footer-links
 {
   padding-top:10px;
@@ -272,7 +422,8 @@ label {
 {
   color:#737373;
   text-decoration: none;
-  padding: 90px 20px;
+  padding: 20px 20px;
+  margin-top: 20px;
 }
 
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
@@ -295,33 +446,12 @@ label {
   padding-bottom: 2%;
 }
 
-.social-icons a {
-  color: #ffffff;
+.icons {
+  margin-bottom: 30px;
 }
 
-.social-icons .social {
-  -webkit-transform: scale(0.8);  
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-}
-
-.social-icons #social-fb:hover {
-  color: #3B5998;
-}
-
-.social-icons #social-tw:hover {
-  color: #4099FF;
-}
-
-.social-icons #social-gp:hover {
-  color: #d34836;
-}
-
-.social-icons #social-em:hover {
-  color: #f39c12;
+.icons img {
+  width: 50px;
 }
 
 @media ( max-width: 920px ) {
