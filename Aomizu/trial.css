@@ -1,0 +1,43 @@
+.header {
+    background-image: url('Aomizu\ Header\ V3.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fafafa;
+    text-align: center;
+    padding: 16%;
+}
+
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.navbar .logo {
+    height: 25.5px;
+    padding: 10px;
+    float: right;
+}
+
+.navbar .logo img {
+    height: 100%;
+    width: 100%;
+}

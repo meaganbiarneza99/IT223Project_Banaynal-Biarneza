@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f6f6;
+}
+
+.header {
+    background-image: url('Aomizu\ Header\ V3.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fafafa;
+    text-align: center;
+    padding: 16%;
+}
+.header h1 {
+  font-size: 40px;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.navbar-links a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.brand a {
+    height: 46.5px;
+    padding: 10px;
+    float: right;
+    justify-content: center;
+    align-self: center;
+}
+
+.navbar img {
+    height: 100%;
+    width: 100%;
+}
+.navbar .navbar-links {
+    display: flex;
+}
+
+.navbar .navbar-links a {
+    display: block;
+    text-align: center;
+    float: left;
+}
+
+.navbar .navbar-toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    float: left;
+}
+
+.navbar #navbar-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    float: left;
+}
+
+.navbar .navbar-toggle-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    transition: background-color 0.3s ease;
+    float: left;
+}
+
+.product-filter h1 {
+    font-size: 28px;
+    font-weight: 300;
+    flex: 1;
+    padding: 0px 20px;
+    font-weight: bold;
+}
+
+.products h5 {
+    font-weight: 500;
+    line-height: 1.7em;
+}
+
+.products h6 {
+    color: #666;
+    font-size: 14px;
+}
+
+.product-body {
+    margin-left: 10 auto;
+    margin-right: 10 auto;
+    width: 90%;
+    max-width: 1240px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f6f6;
+}
+
+.product-filter {
+    display: flex;
+    padding: 30px 0;
+}
+
+.sort {
+    display: flex;
+    align-self: flex-end;
+}
+
+.collection-sort {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
+.collection-sort:first-child {
+    padding-right: 20px;
+}
+
+label {
+    color: #666;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 2em;
+    text-transform: uppercase;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 2%;
+    flex: 1 16%;
+    margin: 0.5%;
+    
+    background-color: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+}
+
+.product-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-image input {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    margin-top: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+@media ( max-width: 920px ) {
+    
+    .product-card {
+        flex: 1 21%;
+    }
+    
+    .products .product-card:first-child, 
+    .products .product-card:nth-child(2) {
+        flex: 2 46%;
+    }
+    
+}
+
+@media ( max-width: 600px ) {
+    
+    .product-card {
+        flex: 1 46%;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    
+}
+
+@media ( max-width: 520px ) {
+    
+    h1 {
+        margin-bottom: 20px;
+    }
+    
+    .product-filter {
+        flex-direction: column;
+    }
+    
+    .sort {
+        align-self: flex-start;
+    }
+    
+}
+  
+@media (max-width: 520px) {
+    .navbar .navbar-links {
+        display: none;
+    }
+
+    .navbar .navbar-toggle-label {
+        display: block;
+    }
+
+    .navbar .navbar-toggle-icon {
+        margin-top: 6px;
+    }
+
+    .navbar input[type="checkbox"]:checked ~ .navbar-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar input[type="checkbox"]:checked ~ .navbar-links a {
+        padding: 14px 20px;
+        transition: background-color 0.3s ease;
+    }
+}
