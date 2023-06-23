@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Aomizu.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="Register.css">
+    <title>Aomizu - Contact</title>
+</head>
+<body>
+     <div class="header">
+     </div>
+     <div class="navbar">
+          <div class="brand">
+               <a href="index.html"><img src="images/Aomizu Brand V2.png"></a>
+               </div>
+          <input type="checkbox" id="navbar-toggle">
+          <label for="navbar-toggle" class="navbar-toggle-label">
+               <span class="navbar-toggle-icon"></span>
+          </label>
+          <div class="navbar-links">
+               <a href="index.html">Home</a>
+               <a href="About.html">About</a>
+               <a href="shop.html">Shop</a>
+               <a href="Contact Us.html">Contact Us</a>
+          </div>
+     </div>
+     
+     <div class="main">
+          <div class="contact-form-body">
+               <div class="container">  
+                    <form id="form" action="" method="post">
+                      <h3>Delivery Information</h3>
+                      <h4>Please enter your information and contact details</h4>
+                      <fieldset>
+                        <input placeholder="Your Name" type="text" tabindex="1" required autofocus>
+                      </fieldset>
+                      <fieldset>
+                        <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                      </fieldset>
+                      <fieldset>
+                        <input placeholder="Your Phone Number" type="number" tabindex="3" required>
+                      </fieldset>
+                      <fieldset>
+                         <input placeholder="Your Address" type="text" tabindex="4" required>
+                       </fieldset>
+                      <fieldset>
+                        <textarea placeholder="Additional description (Optional)" tabindex="5"></textarea>
+                      </fieldset>
+                      <fieldset>
+                        <button name="submit" type="button" id="delivery-submit" disabled>Submit</button>
+                      </fieldset>
+                    </form>
+               </div>
+          </div>
+     </div>
+     
+     <div id="popup" class="popup">
+          <p>Thank you for your purchase! Delivery may take between 3 days to 1 week.</p>
+          <button id="ok-btn">OK</button>
+        </div>
+
+        <div class="footer">
+          <footer class="site-footer">
+                <input type="image" src="images/Aomizu Brand V2.png">
+                <div class="footer-container">
+                     <div class="social-icons">
+                          <div class="icons">
+                               <a href="#"><img src="images/icons8-facebook-480.png"></a>
+                               <a href="#"><img src="images/icons8-instagram-480.png"></a>
+                               <a href="#"><img src="images/icons8-twitter-480.png"></a>
+                               </div>
+                            <div class="footer-links">
+                              <a href="index.html">HOME</a>
+                              <a href="About.html">ABOUT</a>
+                              <a href="shop.html">SHOP</a>
+                              <a href="Contact Us.html">CONTACT US</a>
+                               </div>
+                     </div>
+                     <hr>
+                          <div class="copyright-row">
+                               <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
+                               <a href="index.html">Aomizu</a>.</p>
+                          </div>
+                </div>
+            </footer>
+           </div>
+<script>
+     var button = document.getElementById('delivery-submit');
+     var popup = document.getElementById('popup');
+     var homepage = document.getElementById('ok-btn');
+     var form = document.getElementById('form');
+     var inputFields = form.querySelectorAll('input[type="text"]');
+     inputFields.forEach(function(input) {
+     input.addEventListener('input', function() {
+        var isAllFieldsFilled = Array.from(inputFields).every(function(field) {
+          return field.value !== '';
+        });
+        button.disabled = !isAllFieldsFilled;
+      });
+     });
+
+     // Prevent form submission
+     button.addEventListener('click', function(event) {
+     event.preventDefault();
+
+      popup.style.display = 'block';
+     });
+
+     homepage.addEventListener('click', function() {
+     window.location.href = 'index.html';
+     })
+</script>
+</body>
+</html>
