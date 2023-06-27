@@ -4,165 +4,259 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Aomizu.png" type="image/x-icon"/>
+    <link rel="icon" href="images/Aomizu.png" type="image/x-icon"/>
     <link rel="stylesheet" href="shop.css">
     <title>Aomizu - Shop</title>
 </head>
 <body>
+	<!-- Header -->
     <div class="header">
     </div>
 	<div class="navbar">
 		<div class="brand">
-			<a href="index.html"><img src="Aomizu Brand V2.png"></a>
+			<a href="index.html"><img src="images/Aomizu Brand V2.png"></a>
 			</div>
 		<input type="checkbox" id="navbar-toggle">
 		<label for="navbar-toggle" class="navbar-toggle-label">
 		  <span class="navbar-toggle-icon"></span>
 		</label>
 		<div class="navbar-links">
-		  <a href="index.html">Home</a>
-		  <a href="About Us.html">About</a>
-		  <a href="shop.html">Shop</a>
-		  <a href="#">Contact Us</a>
+			<a href="index.html">Home</a>
+			<a href="About.html">About</a>
+			<a href="shop.html">Shop</a>
+			<a href="Contact Us.html">Contact Us</a>
 		</div>
 	  </div>
+
+	  <span id="cart-counter" class="counter-hidden"></span>
+
+	  <div class="cart">
+		<input type="image" src="images/white shopping cart.png" id="cart-img">
+	  </div>
+
+	<div id="cart-overlay">
+		<div class="cart-popup">
+			<div class="product-cart">
+				<div class="cart-items">
+				</div>
+			</div>
+			<div class="cart-popup-btn">
+			<button id="checkout-button" type="button">Checkout</button>
+			<div id="total-price"></div>
+			</div>
+		</div>
+	</div>
+	
+
 <div class="shop-body">
     <nav class="product-filter">
 		<h1>PRODUCTS</h1>
 		
-		<div class="sort">
-			<div class="collection-sort">
-				<label>Filter by:</label>
-				<select>
-		      <option value="/">All Jackets</option>
-		      <option value="/">2016</option>
-		      <option value="/">jacket</option>
-		      <option value="/">Jackets</option>
-		      <option value="/">layers</option>
-		      <option value="/">Obermeyer</option>
-		      <option value="/">Roxy</option>
-		      <option value="/">womens</option>
-		   	</select>
-			</div>
-			
-			<div class="collection-sort">
-				<label>Sort by:</label>
-				<select>
-		      <option value="/">Featured</option>
-		      <option value="/">Best Selling</option>
-		      <option value="/">Alphabetically, A-Z</option>
-		      <option value="/">Alphabetically, Z-A</option>
-		      <option value="/">Price, low to high</option>
-		      <option value="/">Price, high to low</option>
-		      <option value="/">Date, new to old</option>
-		      <option value="/">Date, old to new</option>
-		    </select>
+		<!-- Product Filter -->
+		<div class="filter-sort-container">
+			<div class="sort">
+				<div class="collection-sort">
+					<label>Filter by:</label>
+					<select id="filter-select">
+						<option value="all">All Products</option>
+						<option value="bottles">Bottles</option>
+						<option value="accessories">Bottle Accessories</option>
+					</select>
+				</div>
+		
+				<div class="collection-sort">
+					<label>Sort by:</label>
+					<select id="sort-select">
+						<option value="featured">Featured</option>
+						<option value="bestselling">Best Selling</option>
+						<option value="az">Alphabetically, A-Z</option>
+						<option value="za">Alphabetically, Z-A</option>
+						<option value="lowtohigh">Price, low to high</option>
+						<option value="hightolow">Price, high to low</option>
+						<option value="newtoold">Date, new to old</option>
+						<option value="oldtonew">Date, old to new</option>
+					</select>
+				</div>
 			</div>
 		</div>
 	</nav>
 	
+	<!-- Products -->
 	<section class="products">
-		<div class="product-card">
+		<div class="product-card bottles">
 			<div class="product-image">
-				<input type="image" src="hydro-flask-bottle-on-metal-railing.jpg">
+				<input type="image" id="product" src="images/18oz Stainless Steel Bottle.png">
 			</div>
 			<div class="product-info">
-				<h5>Winter Jacket</h5>
-				<h6>$99.99</h6>
+				<h5>18oz Stainless Steel Bottle</h5>
+				<h6>₱790.00</h6>
 			</div>
 		</div>
 		
-		<div class="product-card">
+		<div class="product-card bottles">
 			<div class="product-image">
-				<input type="image" src="Flask-Stainless-Smoking.png">
+				<input type="image" id="product1" src="images/32oz Black Aomizu Bottle.png">
 			</div>
 			<div class="product-info">
-				<h5>Winter Jacket</h5>
-				<h6>$99.99</h6>
+				<h5>32oz Wide-Lid Bottle</h5>
+				<h6>₱970.00</h6>
 			</div>
 		</div>
 		
-		<div class="product-card">
+		<div class="product-card bottles">
 			<div class="product-image">
-				<input type="image" src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
+				<input type="image" id="product2" src="images/1-8 Liter Flask Black.png">
 			</div>
 			<div class="product-info">
-				<h5>Winter Jacket</h5>
-				<h6>$99.99</h6>
+				<h5>60oz Spout-Lid Bottle</h5>
+				<h6>₱1,500.00</h6>
 			</div>
 		</div>
 		
-		<div class="product-card">
+		<div class="product-card bottles">
 			<div class="product-image">
-				<input type="image" src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
+				<input type="image" id="product3" src="images/64oz Stainless Steel Bottle.png">
 			</div>
 			<div class="product-info">
-				<h5>Winter Jacket</h5>
-				<h6>$99.99</h6>
+				<h5>64oz Stainless Steel Bottle</h5>
+				<h6>₱1,850.00</h6>
 			</div>
 		</div>
 		
-		<div class="product-card">
+		<div class="product-card bottles">
 			<div class="product-image">
-				<input type="image" src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
+				<input type="image" id="product4" src="Images/32oz Straw Cap Lid Bottle.png">
 			</div>
 			<div class="product-info">
-				<h5>Winter Jacket</h5>
-				<h6>$99.99</h6>
+				<h5>32oz Straw-Lid Bottle</h5>
+				<h6>₱990.00</h6>
+			</div>
+		</div>
+
+		<!-- Product Popups -->
+		<div id="overlay">
+			<div class="product-popup">
+				<div class="product-popup-info">
+					<div class="product-popup-image first-img">
+						<div class="product-popup-text">
+						<h1>Stainless Bottle</h1>
+						<h2>18oz</h2>
+						<p>Sleek designed stainless steel bottle with a wide mouth flex cap. Features a shiny finish that highlights the beauty of the metal</p>
+						</div>
+						<div class="product-popup-price-btn">
+						<p><span>₱790</span></p>
+						<button id="toggleButton" type="button" onclick="addToCart('Stainless Bottle 18oz', '790.00', 'Images/18oz Stainless Steel Bottle.png')">purchase</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		
-		<div class="product-card">
-			<div class="product-image">
-				<input type="image" src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
-			</div>
-			<div class="product-info">
-				<h5>Winter Jacket</h5>
-				<h6>$99.99</h6>
-			</div>
-		</div>
-		
-		<div class="product-card">
-			<div class="product-image">
-				<input type="image" src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
-			</div>
-			<div class="product-info">
-				<h5>Winter Jacket</h5>
-				<h6>$99.99</h6>
+		<div id="overlay1">
+			<div class="product-popup">
+				<div class="product-popup-info">
+					<div class="product-popup-image second-img">
+						<div class="product-popup-text">
+						<h1>Wide-Lid Bottle</h1>
+						<h2>32oz</h2>
+						<p>Wide mouth flex cap cylinder bottle available with different selections of solid color Compatible with Wide Mouth Straw Lid</p>
+						</div>
+						<div class="product-popup-price-btn">
+						<p>₱970</p>
+						<button id="toggleButton" type="button" onclick="addToCart('Stainless Bottle 18oz', '970.00', 'images/32oz Black Aomizu Bottle.png')">purchase</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		
-		<div class="product-card">
-			<div class="product-image">
-				<input type="image" src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
-			</div>
-			<div class="product-info">
-				<h5>Winter Jacket</h5>
-				<h6>$99.99</h6>
-			</div>
-		</div>
-		
-		<div class="product-card">
-			<div class="product-image">
-				<input type="image" src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
-			</div>
-			<div class="product-info">
-				<h5>Winter Jacket</h5>
-				<h6>$99.99</h6>
+
+		<div id="overlay2">
+			<div class="product-popup">
+				<div class="product-popup-info">
+					<div class="product-popup-image third-img">
+						<div class="product-popup-text">
+						<h1>Spout-Lid Bottle</h1>
+						<h2>60oz</h2>
+						<p>Oversized flask featuring a spout-lid for ideal beverage flow and has a hinge for to stay open for drinking.</p>
+						</div>
+						<div class="product-popup-price-btn">
+						<p><span>₱1,500</span></p>
+						<button id="toggleButton" type="button" onclick="addToCart('Spout-Lid Bottle 60oz', '1500.00', 'Images/1-8 Liter Flask Black.png')">purchase</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		
-		<div class="product-card">
-			<div class="product-image">
-				<input type="image" src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
-			</div>
-			<div class="product-info">
-				<h5>Winter Jacket</h5>
-				<h6>$99.99</h6>
+
+		<div id="overlay3">
+			<div class="product-popup">
+				<div class="product-popup-info">
+					<div class="product-popup-image fourth-img">
+						<div class="product-popup-text">
+						<h1>Stainless Bottle</h1>
+						<h2>64oz</h2>
+						<p>Oversize flask with an cap featuring a stainless steel exterior and body for a shiny ang sleek metal finish.</p>
+						</div>
+						<div class="product-popup-price-btn">
+						<p><span>₱1,850</span></p>
+						<button id="toggleButton" type="button" onclick="addToCart('Stainless Bottle 64oz', '1850.00', 'Images/64oz Stainless Steel Bottle.png')">purchase</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		
+
+		<div id="overlay4">
+			<div class="product-popup">
+				<div class="product-popup-info">
+					<div class="product-popup-image fifth-img">
+						<div class="product-popup-text">
+						<h1>Straw-Lid Bottle</h1>
+						<h2>32oz</h2>
+						<p>Harvest Vases are a reinterpretation<br> of peeled fruits and vegetables as<br> functional objects. The surfaces<br> appear to be sliced and pulled aside,<br> allowing room for growth. </p>
+						</div>
+						<div class="product-popup-price-btn">
+						<p><span>₱990</span></p>
+						<button id="toggleButton" type="button" onclick="addToCart('Stainless Bottle 18oz', '990.00', 'Images/32oz Straw Cap Lid Bottle.png')">purchase</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 </div>
+
+<!-- Footer -->
+	<div class="footer">
+    <footer class="site-footer">
+		<input type="image" src="images/Aomizu Brand V2.png">
+		<div class="footer-container">
+			<div class="social-icons">
+				<div class="icons">
+					<a href="#"><img src="images/icons8-facebook-480.png"></a>
+					<a href="#"><img src="images/icons8-instagram-480.png"></a>
+					<a href="#"><img src="images/icons8-twitter-480.png"></a>
+					</div>
+			  	<div class="footer-links">
+					<a href="index.html">HOME</a>
+					<a href="About.html">ABOUT</a>
+					<a href="shop.html">SHOP</a>
+					<a href="Contact Us.html">CONTACT US</a>
+					</div>
+			</div>
+			<hr>
+				<div class="copyright-row">
+					<p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
+					<a href="index.html">Aomizu</a>.</p>
+				</div>
+		</div>
+ 	</footer>
+	</div>
+
+<!-- Scripts -->
+<script src="shop.js"></script>
+<script src="cart.js"></script>
+<script src="filter.js"></script>
+<script src="https://kit.fontawesome.com/2f712c8317.js" crossorigin="anonymous"></script>
 </body>
 </html>
